@@ -1,5 +1,5 @@
 angular.module('angular-sidebar', [])
-  .directive('sidebar', ['$timeout', function ($timeout) {
+  .directive('sidebar', [function () {
     return {
       restrict: 'C',
       controller: ['$scope', function ($scope) {
@@ -9,7 +9,7 @@ angular.module('angular-sidebar', [])
         function toogle (_sidebar) {
           if (_sidebar.length) {
             var old_center_size = center_size;
-            center_size = center_size + (_sidebar.hasClass(hide_class) ? 2 : -2);
+            center_size += (_sidebar.hasClass(hide_class) ? -2 : 2);
             _sidebar.toggleClass(hide_class);
             $scope.center_sidebar.addClass('col-xs-'+center_size);
             $scope.center_sidebar.removeClass('col-xs-'+old_center_size);
@@ -26,16 +26,12 @@ angular.module('angular-sidebar', [])
       }],
       link: function (scope, iElement, iAttrs) {
         iElement.addClass('row');
-        debugger;
         scope.center_sidebar = angular.element('.sidebar-center');
         scope.left_sidebar = angular.element('.sidebar-left');
         scope.right_sidebar = angular.element('.sidebar-right');
         scope.left_sidebar.addClass('col-xs-2');
         scope.right_sidebar.addClass('col-xs-2');
-        $timeout(function () {
-          scope.toggle_left_sidebar();
-          scope.toggle_right_sidebar();
-        });
+        scope.center_sidebar.addClass('col-xs-8');
       }
     };
   }]);
