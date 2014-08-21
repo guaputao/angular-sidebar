@@ -421,3 +421,18 @@ Small Device Styles
   }
 
 }
+
+.sidebar {
+  background-color: #ccc;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sidebar-center {
+  text-align: center;
+}
+
+.sidebar-left, .sidebar-right {
+  background-color: #bbb;
+  text-align: center;
+}

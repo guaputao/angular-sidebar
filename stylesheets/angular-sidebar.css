@@ -1,0 +1,35 @@
+.sidebar {
+  display: table;
+}
+
+.sidebar .sidebar-center {
+  display: table-cell;
+  float: none;
+}
+
+.sidebar .sidebar-left {
+  display: table-cell;
+  float: none;
+  border-right: 1px;
+  border-right-style: solid;
+  border-color: #ddd;
+}
+
+.sidebar .sidebar-right {
+  display: table-cell;
+  float: none;
+  border-left: 1px;
+  border-left-style: solid;
+  border-color: #ddd;
+}
+
+.sidebar .sidebar-hide {
+  width: 0;
+  height: 0;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  opacity: 0;
+}

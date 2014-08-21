@@ -6,7 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="angular-sidebar : ">
 
+    <link type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/angular-sidebar.css">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
+    <script type="text/javascript" src="javascripts/angular-sidebar.js"></script>
 
     <title>angular-sidebar</title>
   </head>
@@ -29,10 +36,23 @@
     </div>
 
     <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
+    <div id="main_content_wrap" class="outer container">
       <section id="main_content" class="inner">
-        <h1>
-<a name="angular-sidebar" class="anchor" href="#angular-sidebar"><span class="octicon octicon-link"></span></a>angular-sidebar</h1>
+        <div ng-app="angular-sidebar" class="sidebar">
+            <div class="sidebar-left">
+              <h1>left</h1>
+            </div>
+            <div class="sidebar-center">
+              <button class="btn btn-default" ng-click="toggle_left_sidebar()">Toggle left</button>
+              <button type="button" class="btn btn-default" ng-click="toggle_right_sidebar()">Toggle Right</button>
+              <div id="lipsum">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur tortor quis ligula sodales, in aliquam purus venenatis. Aliquam vehicula, justo et tempus pretium, quam justo pulvinar dui, vitae blandit lectus lacus at tellus. Vestibulum tellus velit, lacinia a magna vel, euismod consectetur eros.</p>
+              </div>
+            </div>
+            <div class="sidebar-right">
+              <h1>right</h1>
+            </div>
+          </div>
       </section>
     </div>
 
@@ -44,16 +64,16 @@
       </footer>
     </div>
 
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-54037920-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("UA-54037920-1");
+        pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
 
 
   </body>
