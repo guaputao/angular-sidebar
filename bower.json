@@ -1,0 +1,32 @@
+{
+  "name": "angular-sidebar",
+  "main": "angular-sidebar.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/fvalverd/angular-sidebar",
+  "authors": [
+    "Felipe Valverde <felipe.valverde.campos@gmail.com>"
+  ],
+  "description": "Angular sidebar directive",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "angular",
+    "sidebar",
+    "directive",
+    "class",
+    "module"
+  ],
+  "dependencies": {
+    "angular": ">=1.2.0",
+    "jquery": ">=1.6.4"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
